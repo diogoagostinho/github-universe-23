@@ -1,3 +1,5 @@
+/* FONT */
+
 @font-face {
   font-family: "Mona Sans";
   src: url("../Mona-Sans.woff2") format("woff2 supports variations"),
@@ -6,6 +8,161 @@
   font-stretch: 75% 125%;
 }
 
+/* Elements */
+
 * {
   font-family: "Mona Sans";
+  margin: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:visited {
+  color: #fff;
+}
+
+/* Classes */
+
+.root {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+
+  backdrop-filter: brightness(50%) blur(20px);
+}
+
+.navbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 15px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.navbar__content .left {
+  gap: 10px;
+}
+
+.navbar__content-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-arrow i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 2.6ch;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-arrow {
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-icon img {
+  width: 30px;
+}
+
+.navbar-separation {
+  font-size: 3.4ch;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-title h1 {
+  font-size: 2.7ch;
+  font-weight: 600;
+}
+
+.navbar__content button {
+  background: transparent;
+  color: #fff;
+  padding: 12px 32px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  font-size: 1.8ch;
+  font-weight: 600;
+
+  transition: all 0.12s ease-in-out;
+}
+
+.navbar__content button:hover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+/* CONTENT */
+
+.content {
+  background: #000;
+  height: 1000px;
+  padding: 14vh 6vh;
+}
+
+.content__hero {
+  border-radius: 20px;
+  overflow: hidden;
+
+  width: 100%;
+
+  margin-bottom: 5vh;
+
+  /**/
+  position: relative;
+
+  cursor: pointer;
+}
+
+.content__hero-playbtn {
+  position: absolute;
+  bottom: 5vh;
+  left: 6vh;
+  padding: 11px 12px;
+
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.3);
+
+  font-weight: 500;
+  border-radius: 100px;
+
+  align-items: center;
+  display: flex;
+
+  transition: all 0.15s ease-in-out;
+}
+.content__hero-playbtn i {
+  font-size: 2.8ch;
+  margin-right: 2vh;
+}
+.content__hero-playbtn p {
+  margin-right: 1.5vh;
+}
+
+.content__hero img {
+  width: 100%;
+  object-fit: cover;
+
+  transition: all 0.18s ease-in-out;
+  transform: scale(1.05);
 }

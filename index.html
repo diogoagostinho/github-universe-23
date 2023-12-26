@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- General Metas -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Universe 2023</title>
+
+    <!-- Styles & Fonts -->
     <link rel="stylesheet" href="css/styles.css" />
-    <script type="module" src="js/scripts.js"></script>
     <link
       rel="preload"
       href="Mona-Sans.woff2"
@@ -13,25 +14,61 @@
       type="font/woff2"
       crossorigin
     />
+
+    <!-- Scripts -->
+    <script type="module" src="js/scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f1ed90d8e0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Other -->
+    <title>GitHub Universe - November 8-9, 2023</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
   </head>
   <body>
     <div class="root">
       <div class="navbar">
         <div class="navbar__content">
-          <div class="navbar__content-title">
-            <div class="navbar-arrow"></div>
-            <div class="navbar-icon"></div>
-            <div class="navbar-separation"></div>
-            <div class="navbar-title"><h1>Github Universe</h1></div>
+          <div class="navbar__content left">
+            <a href="https://github.com/" target="_blank">
+              <div id="navbarLogo" class="navbar__content-logo">
+                <div id="navbarArrow" class="navbar-arrow">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="navbar-icon">
+                  <img src="img/github-icon.png" alt="Github Universe" />
+                </div>
+              </div>
+            </a>
+            <div class="navbar-separation">/</div>
+            <div class="navbar-title"><h1>GitHub Universe</h1></div>
           </div>
-          <div class="navbar__content-button">
-            <button>Watch on demand</button>
+          <div class="navbar__content right">
+            <a
+              href="https://reg.githubuniverse.com/flow/github/universe23/sessioncatalog/page/sessioncatalog?search.deliveryformat=1692799009854004CQlx"
+              target="_blank"
+            >
+              <button>Watch on demand</button></a
+            >
           </div>
         </div>
       </div>
       <div class="content">
-        <div class="content__hero"></div>
-        <div class="content__title"></div>
+        <a href="https://www.youtube.com/watch?v=jVa1qCkcfp8" target="_blank">
+          <div id="heroContent" class="content__hero">
+            <img
+              id="heroImage"
+              src="img/hero-video@2x.jpg"
+              alt="Github Universe"
+            />
+            <div id="heroPlayButton" class="content__hero-playbtn">
+              <i class="fa-regular fa-circle-play"></i>
+              <p>Universe 2023 recap</p>
+            </div>
+          </div>
+        </a>
+        <div class="content__title"><img src="img/hero-logo.svg" alt="" /></div>
         <div class="content__description"></div>
         <div class="content__images"></div>
         <div class="content__analytics"></div>
@@ -39,39 +76,64 @@
         <div class="content__sessions">
           <div class="content__sessions-title"></div>
           <div class="content__sessions-block">
-            <div class="sessions-block-right">
+            <div class="sessions-block-left">
               <div class="sessions-block-image"></div>
             </div>
-            <div class="sessions-block-left">
+            <div class="sessions-block-right">
               <div class="sessions-block-title"></div>
               <div class="sessions-block-description"></div>
               <div class="sessions-block-link"></div>
             </div>
           </div>
           <div class="content__sessions-block">
-            <div class="sessions-block-right">
+            <div class="sessions-block-left">
               <div class="sessions-block-image"></div>
             </div>
-            <div class="sessions-block-left">
+            <div class="sessions-block-right">
               <div class="sessions-block-title"></div>
               <div class="sessions-block-description"></div>
               <div class="sessions-block-link"></div>
             </div>
           </div>
           <div class="content__sessions-block">
-            <div class="sessions-block-right">
+            <div class="sessions-block-left">
               <div class="sessions-block-image"></div>
             </div>
-            <div class="sessions-block-left">
+            <div class="sessions-block-right">
               <div class="sessions-block-title"></div>
               <div class="sessions-block-description"></div>
               <div class="sessions-block-link"></div>
             </div>
           </div>
         </div>
-        <div class="content__newsletter"></div>
+        <div class="content__newsletter">
+          <div class="content__newsletter-box">
+            <div class="newsletter-box-left">
+              <div class="box-left-title"></div>
+              <div class="box-left-date"></div>
+              <div class="box-left-description"></div>
+            </div>
+            <div class="newsletter-box-right">
+              <div class="box-right-label"></div>
+              <div class="box-right-input">
+                <div class="input-email"></div>
+                <div class="input-submit"></div>
+              </div>
+              <div class="box-right-terms"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer"></div>
+      <div class="footer">
+        <div class="footer__top">
+          <div class="footer__top-left"></div>
+          <div class="footer__top-right"></div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-left"></div>
+          <div class="footer__bottom-right"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
