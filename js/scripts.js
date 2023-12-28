@@ -4,8 +4,10 @@ const heroImage = document.getElementById("heroImage");
 const heroContent = document.getElementById("heroContent");
 const navbarLogo = document.getElementById("navbarLogo");
 const navbarArrow = document.getElementById("navbarArrow");
+const sessionLink = document.getElementsByClassName("sessions-block-link");
 
 navbarArrow.style.opacity = "0";
+navbarArrow.style.transform = "translateX(0)";
 
 heroContent.addEventListener("mouseover", function () {
   heroPlayButton.style.background = "rgba(0, 0, 0, 0.6)";
@@ -19,10 +21,12 @@ heroContent.addEventListener("mouseout", function () {
 
 navbarLogo.addEventListener("mouseover", function () {
   navbarArrow.style.opacity = "100";
+  navbarArrow.style.transform = "translateX(-5px)";
 });
 
 navbarLogo.addEventListener("mouseout", function () {
   navbarArrow.style.opacity = "0";
+  navbarArrow.style.transform = "translateX(0)";
 });
 
 //
@@ -30,7 +34,6 @@ navbarLogo.addEventListener("mouseout", function () {
 //
 
 const heroLogo = document.getElementById("heroLogo");
-const contentAnalytics = document.getElementsByClassName("analytics-text");
 
 window.addEventListener("scroll", function () {
   heroLogo.style.opacity = 1;
@@ -55,20 +58,29 @@ function checkVisible(elm) {
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
 
-for (var i = 0, length = contentAnalytics.length; i < length; i++) {
-  console.log(contentAnalytics);
-  console.log("1 - " + length);
-  console.log("2 - " + i);
+// VIEW
 
-  window.addEventListener("scroll", function () {
-    contentAnalytics[i].style.opacity = 1;
-    contentAnalytics[i].style.transform = "translateY(0)";
+$(allInView);
+$(window).scroll(allInView);
 
-    console.log("3 - " + contentAnalytics[i]);
-  });
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
 
-  contentAnalytics[i].style.opacity = checkVisible(contentAnalytics) ? 1 : 0;
-  contentAnalytics[i].style.transform = checkVisible(contentAnalytics)
-    ? "translateY(0)"
-    : "translateY(20px)";
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return elemBottom <= docViewBottom && elemTop >= docViewTop;
+}
+
+function allInView() {
+  for (let i = 0; i < 3; i++) {
+    if (isScrolledIntoView($(".analytics-text"))) {
+      $(".analytics-text").css("transform", "translateY(10px)");
+      $(".analytics-text").css("opacity", "1");
+    } else {
+      $(".analytics-text").css("transform", "translateY(20px)");
+      $(".analytics-text").css("opacity", "0");
+    }
+  }
 }
