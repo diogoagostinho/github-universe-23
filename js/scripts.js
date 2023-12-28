@@ -30,6 +30,7 @@ navbarLogo.addEventListener("mouseout", function () {
 //
 
 const heroLogo = document.getElementById("heroLogo");
+const contentAnalytics = document.getElementsByClassName("analytics-text");
 
 window.addEventListener("scroll", function () {
   heroLogo.style.opacity = 1;
@@ -52,4 +53,22 @@ function checkVisible(elm) {
     window.innerHeight
   );
   return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
+
+for (var i = 0, length = contentAnalytics.length; i < length; i++) {
+  console.log(contentAnalytics);
+  console.log("1 - " + length);
+  console.log("2 - " + i);
+
+  window.addEventListener("scroll", function () {
+    contentAnalytics[i].style.opacity = 1;
+    contentAnalytics[i].style.transform = "translateY(0)";
+
+    console.log("3 - " + contentAnalytics[i]);
+  });
+
+  contentAnalytics[i].style.opacity = checkVisible(contentAnalytics) ? 1 : 0;
+  contentAnalytics[i].style.transform = checkVisible(contentAnalytics)
+    ? "translateY(0)"
+    : "translateY(20px)";
 }
