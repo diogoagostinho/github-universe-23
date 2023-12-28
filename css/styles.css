@@ -427,12 +427,19 @@ hr {
 
 .content__newsletter-box {
   background: #0d1117;
+  background-image: url(../img/bbblurry.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding: 14vh;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10vw;
+
+  border: 1px solid rgb(255, 255, 255, 0.1);
+  border-radius: 20px;
 }
 
 .newsletter-box-left {
@@ -454,10 +461,13 @@ hr {
   margin: 3vh 0;
 
   color: #828b94;
+  color: #cecece;
+
   font-weight: 500;
 }
 .box-left-description {
   color: #828b94;
+  color: #cecece;
   font-weight: 500;
 }
 
@@ -520,6 +530,7 @@ hr {
   font-weight: 500;
   font-size: 1.1vw;
   color: #828b94;
+  color: #cecece;
 }
 
 .box-right-terms a {
