@@ -83,7 +83,7 @@ function isScrolledIntoView(elem) {
 function allInView() {
   for (let i = 0; i < 3; i++) {
     if (isScrolledIntoView($(".analytics-text"))) {
-      $(".analytics-text").css("transform", "translateY(10px)");
+      $(".analytics-text").css("transform", "translateY(1px)");
       $(".analytics-text").css("opacity", "1");
     } else {
       $(".analytics-text").css("transform", "translateY(20px)");
