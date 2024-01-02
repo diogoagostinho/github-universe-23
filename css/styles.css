@@ -1,4 +1,6 @@
-/* FONT */
+/* 
+//  FONTS
+*/
 
 @font-face {
   font-family: "Mona Sans";
@@ -16,7 +18,9 @@
   font-stretch: 75% 125%;
 }
 
-/* Elements */
+/* 
+//  Elements
+*/
 
 * {
   font-family: "Mona Sans", sans-serif;
@@ -31,12 +35,8 @@ a:visited {
   color: #fff;
 }
 
-/* Classes */
-
-.root {
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
+hr {
+  border: 1px solid rgb(28, 28, 40);
 }
 
 html {
@@ -47,7 +47,6 @@ html {
   scrollbar-track-color: #000;
   scrollbar-arrow-color: #000;
   scrollbar-shadow-color: #646464;
-  scrollbar-dark-shadow-color: #646464;
 }
 
 ::-webkit-scrollbar {
@@ -72,6 +71,18 @@ html {
 }
 ::-webkit-resizer {
   background-color: #666;
+}
+
+/* 
+//  CLASSES
+*/
+
+/* ROOT */
+
+.root {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -164,6 +175,8 @@ html {
   padding: 14vh 6vh;
 }
 
+/* HERO */
+
 .content__hero {
   border-radius: 20px;
   overflow: hidden;
@@ -211,6 +224,8 @@ html {
   transform: scale(1.05);
 }
 
+/* HERO TITLE */
+
 .content__title img {
   margin-bottom: 10vh;
   width: 100%;
@@ -233,6 +248,8 @@ html {
   margin: 0 2vh;
   height: 3.6vw;
 }
+
+/* IMAGES */
 
 .content__images-imgs {
   display: grid;
@@ -290,6 +307,8 @@ html {
   grid-row-end: 7;
 }
 
+/* ANALYTICS */
+
 .content__analytics {
   margin: 10vh 0;
   display: flex;
@@ -326,10 +345,6 @@ html {
   font-size: 2.6ch;
   color: #6e757d;
   font-weight: 500;
-}
-
-hr {
-  border: 1px solid rgb(28, 28, 40);
 }
 
 /* SESSIONS */
